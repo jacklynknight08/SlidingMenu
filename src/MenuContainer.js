@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import MenuButton from './MenuButton';
 
 class MenuContainer extends Component {
     constructor(props, context){
@@ -28,21 +29,23 @@ class MenuContainer extends Component {
         });
     }
 
+    // Instantiate MenuButton component 
     render() {
         return(
             <div>
-                <div>
-                    <p>List of Colors</p>
-                    <ul>
-                        <li>Red</li>
-                        <li>Yellow</li>
-                        <li>Blue</li>
-                        <li>Orange</li>
-                        <li>Green</li>
-                        <li>Violet</li>
-                        <li>Indigo</li>
-                    </ul>
-                </div>
+                <MenuButton handleMouseDown={this.handleMouseDown}/>    
+                    <div>
+                        <p>List of Colors</p>
+                        <ul>
+                            <li>Red</li>
+                            <li>Yellow</li>
+                            <li>Blue</li>
+                            <li>Orange</li>
+                            <li>Green</li>
+                            <li>Violet</li>
+                            <li>Indigo</li>
+                        </ul>
+                    </div>
             </div>
         );
     }
